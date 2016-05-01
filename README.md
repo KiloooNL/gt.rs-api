@@ -1,7 +1,7 @@
-# GameTracker.rs API Functions
+## GameTracker.rs API Functions
 Functions which retrieves server info and list of server boosts from GameTracker.rs API page.
 
-Server Info features:
+####Server Info features:
   - Server name
   - Type of game server
   - Server mode
@@ -30,9 +30,15 @@ Server Info features:
   - Monthly graph (image url)
   - Rank graph (image url)
 
-Server Boosts features:
+####Server Boosts features:
   - Boost list (all server boosts and their info: time, text, number, status)
   - Number of boosts
   - Number of successful boosts
   - Number of failed boosts
   - Number of pending boosts
+
+## Usage
+Usage explained in example files.
+
+## Support
+Got a bug? Open an issue and we'll fix it!
