@@ -64,6 +64,17 @@ function ServerInfo($ip, $type)
 				$pinfo['nick'] = $player['player']['name'];
 				$pinfo['score'] = $player['player']['score'];
 				$pinfo['time'] = $player['player']['time'];
+				$pinfo['bot'] = $player['player']['is_bot'];
+
+				$seconds = $pinfo['time'] % 60;
+				$pinfo['time'] = ($pinfo['time'] - $seconds) / 60;
+				$minutes = $pinfo['time'] % 60;
+				$hours = ($pinfo['time'] - $minutes) / 60;
+
+				if ($seconds<10) $seconds = '0'.$seconds;
+				if ($minutes<10) $minutes = '0'.$minutes;
+				if ($hours<10) $hours = '0'.$hours;
+				$pinfo['time'] = $hours.':'.$minutes.":".$seconds;
 
 				$players[] = $pinfo;
 			}
