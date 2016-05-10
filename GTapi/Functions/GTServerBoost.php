@@ -4,7 +4,7 @@
 	* Author: MBS
 	* Version: v1.0
 
-	* Facebook: https://www.facebook.com/pages/MagicBrush-Software/666346276834469
+	* Website: www.magicbrush.ga
 	* GitHub: https://github.com/janka99/gt.rs-api
 */
 
@@ -13,9 +13,10 @@ function ServerBoost($ip, $type)
 	$api = file_get_contents("http://api.gametracker.rs/demo/json/server_boosts/$ip/");
 	$bdata = json_decode($api, true);
 
-	if($bdata['apiError'] == 1)
+	if($bdata['apiError'])
 	{
 		return 'Server not found!';
+		die();
 	}
 
 	switch($type)
